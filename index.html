@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clima Atual</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background" id="backgroundDefault"></div>
+  <div class="background1 hidden" id="backgroundWeather"></div>
+
+
+  <div class="container"> 
+    <h1 id="weatherTitle">CLIMA ATUAL</h1>
+     <br>
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="🗺️ Digite a cidade...              🔍" />
+      <button onclick="getWeather()">Buscar</button>
+    </div>
+
+    <div id="weatherPanel" class="weather hidden">
+      <h2 id="cityName"></h2>
+      <div class="main-temp">
+        <div id="weatherEmoji" class="emoji">☁️</div>
+        <div class="temp-info">
+          <p id="temperature" class="temp">-- °C</p>
+          <p id="condition">--</p>
+        </div>
+      </div>
+
+      <div class="details">
+        <div class="detail-box">
+         Temp. Max: <br> <span id="maxTemp">-- °C</span>
+        </div>
+        <div class="detail-box">
+         Temp. Min: <br> <span id="minTemp">-- °C</span>
+        </div>
+        <div class="detail-box">
+         Umidade: <br> <span id="humidity">--%</span>
+        </div>
+        <div class="detail-box">
+         Vento: <br> <span id="wind">-- km/h</span>
+        </div>
+      </div>
+      
+
+    <p id="error" class="error"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
